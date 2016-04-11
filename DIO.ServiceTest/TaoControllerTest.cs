@@ -13,8 +13,8 @@ namespace DIO.ServiceTest
         [TestMethod]
         public void CreateTaoSuccessTest()
         {
-            //Core.MockRepo.MockTao mockTao = new Core.MockRepo.MockTao();
-            Service.Controllers.TaoController ctrlr = new Service.Controllers.TaoController();
+            Core.MockRepo.MockTao mockTao = new Core.MockRepo.MockTao();
+            Service.Controllers.TaoController ctrlr = new Service.Controllers.TaoController(mockTao);
             IHttpActionResult res = ctrlr.CreateTao(new Core.Models.Tao { FirstName = "test4", LastName = "test4", MiddleName = "test4" });
             Assert.AreEqual(typeof(OkNegotiatedContentResult<int>), res.GetType());
         }
