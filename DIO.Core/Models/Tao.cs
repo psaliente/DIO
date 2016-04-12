@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DIO.Core.Models
 {
-    [SQLTableName(tableName = "tbl_Persons")]
+    [SQLTableName("tbl_Persons")]
     public class Tao
     {
         public int ID { get; set; }
